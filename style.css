@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(190, 210, 248);
+    
+}
+
+nav{
+    background-color: rgb(32, 98, 124);
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+}
+nav input{
+    height: 20px;
+    width: 200px;
+    border-radius: 5px;
+    margin:0px 10px;
+    padding: 10px;
+    margin-top: -5px;
+    border: hidden;
+}
+nav a{
+    text-decoration: none;
+    color: antiquewhite;
+    margin:0 30px;
+    text-align: center;    
+}
+nav li{
+    float: right;
+    list-style: none;
+    margin-top: 5px;
+}
+.slider{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container{
+    width: 600%;
+    display: flex;    
+}
+.slide{
+    transition: 2s;
+
+}
+.slide img{
+    width: 1000px;
+    height: 500px;
+}
+.container input{
+    display: none;
+}
+.manual-navigation{
+    width: 1000px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid rgb(190, 210, 248);
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 460px;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background:#40D3DC;
+}
+
+#radio1:checked~.first{
+    margin-left: 0px;
+}
+#radio2:checked~.first{
+    margin-left: -1000px;
+}
+#radio3:checked~.first{
+    margin-left: -2000px;
+}
+#radio4:checked~.first{
+    margin-left: -3000px;
+}
+#radio5:checked~.first{
+    margin-left: -4000px;
+}
+#radio6:checked~.first{
+    margin-left: -5000px;
+}
+#service{
+    background-image: linear-gradient(180deg, #162c35 20%, #2b455e 30%,#0c252f );
+    margin-top: -3.8px;
+    padding: 10px;
+}
+
+#service h1{
+    font-size: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+#services{
+    width: 100%;
+    height: 450px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.item{
+    flex-basis: 25%;
+    margin-top: 40px;
+}
+.item >p{
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+.left{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("/images/9jpg.jpg");
+    background-size: cover;
+    box-shadow: 10px 10px 5px #070707;
+    border-radius: 5px;
+    transform: rotate(7deg);
+    height: 300px;
+}
+.middle{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("/images/10jpg.jpg");
+    background-size: cover;
+    box-shadow: 10px 10px 5px #070707;
+    border-radius: 5px;
+    transform: rotate(7deg);
+    height: 300px;
+}
+.right{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("/images/11jpg.jpg");
+    background-size: cover;
+    box-shadow: 10px 10px 5px #070707;
+    border-radius: 5px;
+    transform: rotate(7deg);
+    height: 300px;
+}
+.about-company{
+    margin-top: 100px;
+}
+.about-company h1{
+    margin-bottom: 30px ;
+
+}
+.about{
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+}
+
+.about img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    flex-basis: 25%;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+.about-article{
+    flex-basis: 60%;
+}
+
+.about-article p{
+    color: white;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.contact{
+    background-image: linear-gradient(180deg,#0c252f, #162c35 , #2b455e);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+}
+
+.image{
+    width: 380px;
+    height: 450px;
+    transform-style: preserve-3d;
+    position: relative;
+    margin: 40px 0;
+}
+.face img{
+    width: 380px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s ease-in-out;
+    transform: perspective(500px);
+}
+.first.image:hover .face.front{
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.face.back ul{
+    display: flex;
+    list-style-type: none; 
+    transform: perspective(500px) translateZ(50px); 
+    font-size: 40px;  
+}
+.face.back{
+    background: #40D3DC;
+    border-radius: 5px;
+    transform: perspective(500px) rotateY(180deg);
+}
+.side ul{
+    display: flex;
+    list-style-type: none;
+    font-size: 40px;
+    transform: translateZ(50px);
+}
+.back li:not(:last-child){
+    margin-right: 40px;
+}
+.image .face{
+    backface-visibility: hidden;
+}
+.first.image:hover .face.back{
+    transform: perspective(500px) rotateY(360deg);
+}
+
+
+.face.side{
+    transform: rotateY(180deg);
+    background: #40D3DC;
+    border-radius: 5px;
+    border: 2px dotted white;
+}
+.second.image:hover .face.front{
+    transform: rotateY(180deg);
+}
+.second.image:hover .face.side{
+    transform: rotateY(360deg);
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(180deg,#2b455e,#254655,#162c35, #0c252f);
+    padding: 20px;
+}
+
+
+footer ul{
+    list-style-type: none;
+    color: white;
+    font-size: 20px;
+}
+footer li{
+    color: white;
+    font-size: 20px;
+}
+footer li:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.list{
+    flex-basis: 20%;
+
+}
+.log-in{
+    flex-basis: 50%;
+    margin: 0 auto;
+}
+
+.log-in2 input{
+    width: 300px;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid grey;
+}
+.log-in button{
+    width: 150px;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.log-in2{
+    border: 1px solid black;
+    padding: 20px;
+    width: 400px;
+    height: 350px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+#name{
+    margin-bottom: 20px;
+}
+#password{
+    margin-bottom: 20px;
+}
