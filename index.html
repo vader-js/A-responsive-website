@@ -20,7 +20,7 @@
     </nav>
 
     <section class="slider">
-        <div class="container">
+        <div class="container" id="container2">
         
       <input type="radio" name="radio-btn" id="radio1">
       <input type="radio" name="radio-btn" id="radio2">
@@ -29,22 +29,22 @@
       <input type="radio" name="radio-btn" id="radio5">
       <input type="radio" name="radio-btn" id="radio6">
 
-        <div class= "first slide">
+        <div class= "first slide" id="1">
         <img src="/images/1jpg.jpg" alt=""></div>
 
-        <div class="slide">
+        <div class="slide" id="2">
         <img src="/images/2jpg.jpg" alt=""></div>
 
-        <div class="slide">
+        <div class="slide" id="3">
         <img src="/images/3jpg.jpg" alt=""></div>
 
-        <div class="slide">
+        <div class="slide" id="4">
         <img src="/images/4jpg.jpg" alt=""></div>
 
-        <div class="slide">
+        <div class="slide" id="5">
         <img src="/images/5jpg.jpg" alt=""></div>
 
-        <div class="slide">
+        <div class="slide" id="6">
         <img src="/images/6jpg.jpg" alt=""></div>
 
         <div class="manual-navigation">
@@ -133,7 +133,7 @@
         </div> 
     </address>
     <footer>
-        <ul class="list">
+        <ul class="list" id="list1">
             <li>lorem</li>
             <li>ipsum</li>
             <li>contact</li>
@@ -141,7 +141,7 @@
             <li>request</li>
             <li>lorem</li>
         </ul>
-        <ul class="list">
+        <ul class="list" id="list2">
             <li>lorem</li>
             <li>ipsum</li>
             <li>contact</li>
@@ -152,11 +152,14 @@
         <aside class="log-in">
             <div class= "log-in2">
             <input type="text" id="name" placeholder="Username"><br>
+            <div class="Error-message" id="user"></div>
+            <i class="fa-solid fa-lock"></i>
             <input type="password" id="password" placeholder="password"><br>
+            <div class="Error-message" id="pass"></div>
             <button type="submit">Log in</button>
         </div>
         </aside>
     </footer>
-    
+  <script src="script.js"></script>  
 </body>
 </html>

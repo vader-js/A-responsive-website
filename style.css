@@ -12,34 +12,49 @@ nav{
     background-color: rgb(32, 98, 124);
     width: 100%;
     height: 40px;
-    position: fixed;
+    position: sticky;
     top: 0;
+    padding: 8px;
 }
-nav input{
+nav ul input{
     height: 20px;
     width: 200px;
     border-radius: 5px;
     margin:0px 10px;
-    padding: 10px;
-    margin-top: -5px;
+    padding: 5px;
     border: hidden;
 }
-nav a{
+nav ul li a{
     text-decoration: none;
     color: antiquewhite;
-    margin:0 30px;
-    text-align: center;    
+    text-align: center; 
+    text-transform: uppercase;
 }
-nav li{
+nav ul li{
     float: right;
     list-style: none;
-    margin-top: 5px;
+    position: relative;
+    margin:0 30px;
+}
+nav ul li:not(:first-child)::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #40D3DC;
+    position: absolute;
+    bottom: -10px;
+    left: 0; 
+    transition: 0.5s; 
+}
+
+nav ul li:not(:first-child):hover::after{
+    width: 100%;
 }
 .slider{
     width: 1000px;
     height: auto;
     margin: 0 auto;
-    border-radius: 10px;
+    border-radius: 0 0 5px 5px;
     overflow: hidden;
 }
 .container{
@@ -203,6 +218,7 @@ nav li{
     height: 450px;
     object-fit: cover;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .face {
@@ -267,7 +283,7 @@ footer{
     width: 100%;
     height: auto;
     background-image: linear-gradient(180deg,#2b455e,#254655,#162c35, #0c252f);
-    padding: 20px;
+    padding-top: 80px;
 }
 
 
@@ -285,8 +301,7 @@ footer li:not(:last-child){
 }
 
 .list{
-    flex-basis: 20%;
-
+    margin-top: 50px;
 }
 .log-in{
     flex-basis: 50%;
@@ -300,13 +315,16 @@ footer li:not(:last-child){
     border-radius: 5px;
     border: none;
     border-bottom: 2px solid grey;
+    outline: none;
 }
 .log-in button{
     width: 150px;
     padding: 5px;
     font-size: 18px;
-    border-radius: 20px;
+    border-radius: 25px;
     margin-top: 20px;
+    background: transparent;
+    border: 2px solid white;
 }
 .log-in2{
     border: 1px solid black;
@@ -320,6 +338,8 @@ footer li:not(:last-child){
     align-items: center;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 10px 10px 5px #070707;
+    background:  #2b455e;
 }
 #name{
     margin-bottom: 20px;
@@ -327,4 +347,15 @@ footer li:not(:last-child){
 #password{
     margin-bottom: 20px;
 }
-/* whatever i feel like */
+
+#list1{
+    margin-left: 80px;
+    flex-basis: 20%;
+}
+#list2{
+    flex-basis: 20%;
+}
+.Error-message{
+    padding: 10px;
+    color: red;
+}
