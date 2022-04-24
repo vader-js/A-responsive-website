@@ -35,4 +35,5 @@ function myFunction(){
         i++;} else{ i = 0;}
         setTimeout(myFunction, 2000);
 }
-window.onload = myFunction;*/
+window.onload = myFunction;
+i feel like i'm loosing my mind*/
